@@ -6,7 +6,18 @@ A-Plus Towing & Recovery
 Services
 Hours
 Contact
-A-Plus Towing & Recovery Logo
+
+---
+
+## Branding & Logos Section
+[Space for A-Plus Towing & Recovery Logo - Primary]
+[Space for Partner/Association Logos]
+[Space for Certification Badges]
+[Space for Additional Branding Elements]
+
+---
+
+## Header Contact Bar
 Call Pocatello: (208) 251-8971
 Call Idaho Falls: (208) 851-1007
 Our Services
@@ -111,4 +122,14 @@ Call Idaho Falls: (208) 851-1007
 
 Call us anytime for immediate assistance!
 
+---
 
+## Footer
+
+© 2025 A-Plus Towing & Recovery. All rights reserved.
+
+Made by [Hunter's Designs](https://huntersdesigns.com) - Free website design services
+
+[Space for Footer Logos]
+[Space for Social Media Links]
+[Space for Additional Footer Content]
