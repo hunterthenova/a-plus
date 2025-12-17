@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Floating Emergency Call Button -->
+    <a href="tel:+12082518971" class="floating-cta" id="floatingCTA">
+        <span class="cta-icon">📞</span>
+        <span class="cta-text">Emergency Call</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
     <!-- Header Navigation -->
     <header class="header">
         <nav class="navbar">
@@ -18,6 +27,7 @@
                     </div>
                     <ul class="nav-menu">
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#stats">About</a></li>
                         <li><a href="#hours">Hours</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -30,10 +40,11 @@
         </nav>
     </header>
 
-    <!-- Hero Contact Bar -->
-    <section class="hero-section">
+    <!-- Hero Section with Parallax Effect -->
+    <section class="hero-section parallax-section">
+        <div class="parallax-bg"></div>
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content fade-in">
                 <h1>Professional Towing & Recovery Services</h1>
                 <p class="hero-subtitle">Serving Pocatello and Idaho Falls with reliable 24/7 emergency towing</p>
                 <div class="hero-contacts">
@@ -46,17 +57,51 @@
                         <a href="tel:+12088511007" class="hero-phone">(208) 851-1007</a>
                     </div>
                 </div>
-                <div class="emergency-badge">24/7 Emergency Service Available</div>
+                <div class="emergency-badge pulse">24/7 Emergency Service Available</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-animate>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Years of Service</div>
+                </div>
+                <div class="stat-item" data-animate>
+                    <div class="stat-number" data-count="10000">0</div>
+                    <div class="stat-label">Vehicles Towed</div>
+                </div>
+                <div class="stat-item" data-animate>
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Hour Availability</div>
+                </div>
+                <div class="stat-item" data-animate>
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Service Locations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Interactive Cards -->
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
+
+            <!-- Service Type Selector -->
+            <div class="service-selector">
+                <button class="selector-btn active" data-service="all">All Services</button>
+                <button class="selector-btn" data-service="towing">Towing</button>
+                <button class="selector-btn" data-service="roadside">Roadside</button>
+                <button class="selector-btn" data-service="recovery">Recovery</button>
+            </div>
+
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-category="towing" data-animate>
+                    <div class="service-icon">🚛</div>
                     <h3>Towing Services</h3>
                     <ul>
                         <li>Light-duty towing for cars and small vehicles</li>
@@ -65,9 +110,13 @@
                         <li>Flatbed towing for high-value vehicles</li>
                         <li>24/7 emergency towing services</li>
                     </ul>
+                    <div class="service-cta">
+                        <a href="tel:+12082518971" class="service-btn">Request Service</a>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-category="roadside" data-animate>
+                    <div class="service-icon">🔧</div>
                     <h3>Roadside Assistance</h3>
                     <ul>
                         <li>Tire changes</li>
@@ -76,54 +125,81 @@
                         <li>Fuel delivery</li>
                         <li>Winching services</li>
                     </ul>
+                    <div class="service-cta">
+                        <a href="tel:+12082518971" class="service-btn">Get Help Now</a>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-category="recovery" data-animate>
+                    <div class="service-icon">⚙️</div>
                     <h3>Recovery Services</h3>
                     <ul>
                         <li>Accident recovery</li>
                         <li>Off-road recovery</li>
                         <li>Heavy load vehicle recovery</li>
                     </ul>
+                    <div class="service-cta">
+                        <a href="tel:+12082518971" class="service-btn">Schedule Recovery</a>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-category="towing" data-animate>
+                    <div class="service-icon">🚗</div>
                     <h3>Additional Services</h3>
                     <ul>
                         <li>Vehicle transport</li>
                         <li>Insurance claims assistance</li>
                         <li>Fleet towing services</li>
                     </ul>
+                    <div class="service-cta">
+                        <a href="tel:+12082518971" class="service-btn">Learn More</a>
+                    </div>
                 </div>
             </div>
 
             <div class="features-section">
                 <div class="features-grid">
-                    <div class="feature-item">
+                    <div class="feature-item" data-animate>
+                        <div class="feature-number">⚡</div>
                         <h4>Fast Response</h4>
                         <p>Quick arrival times when you need us most</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar" data-progress="95"></div>
+                        </div>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-animate>
+                        <div class="feature-number">🎖️</div>
                         <h4>Professional Service</h4>
                         <p>Experienced and certified tow operators</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar" data-progress="100"></div>
+                        </div>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-animate>
+                        <div class="feature-number">🛡️</div>
                         <h4>Safe Transport</h4>
                         <p>Your vehicle handled with care</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar" data-progress="98"></div>
+                        </div>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-animate>
+                        <div class="feature-number">👥</div>
                         <h4>Customer First</h4>
                         <p>Local rides available for stranded drivers</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar" data-progress="100"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Image Gallery Carousel -->
+    <!-- Image Gallery Carousel with Thumbnails -->
     <section class="gallery-section">
         <div class="container">
-            <h2 class="section-title">Our Work</h2>
+            <h2 class="section-title">Our Work in Action</h2>
             <div class="carousel">
                 <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
                 <div class="carousel-track-container">
@@ -158,35 +234,69 @@
                     </div>
                 </div>
                 <button class="carousel-btn next" aria-label="Next slide">›</button>
+                <div class="carousel-indicators" id="carouselIndicators"></div>
             </div>
         </div>
     </section>
 
-    <!-- Customer Reviews -->
+    <!-- Customer Reviews with Auto-Rotating Testimonials -->
     <section class="reviews-section">
         <div class="container">
             <h2 class="section-title">What Our Customers Say</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"They came to my rescue at 2 AM when my car broke down. Professional, quick, and reliable!"</p>
-                    <p class="review-author">Sarah M.</p>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide active">
+                        <div class="review-card-large">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"They came to my rescue at 2 AM when my car broke down. Professional, quick, and reliable!"</p>
+                            <p class="review-author">Sarah M.</p>
+                            <p class="review-location">Pocatello, ID</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="review-card-large">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Best towing service in Pocatello! They handled my truck with care and got me back on the road fast."</p>
+                            <p class="review-author">Mike R.</p>
+                            <p class="review-location">Idaho Falls, ID</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="review-card-large">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"Incredible service! They helped me out of a tough situation when my car got stuck off-road."</p>
+                            <p class="review-author">John D.</p>
+                            <p class="review-location">Pocatello, ID</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Best towing service in Pocatello! They handled my truck with care and got me back on the road fast."</p>
-                    <p class="review-author">Mike R.</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Incredible service! They helped me out of a tough situation when my car got stuck off-road."</p>
-                    <p class="review-author">John D.</p>
-                </div>
+                <div class="testimonial-dots"></div>
             </div>
         </div>
     </section>
 
-    <!-- Hours Section -->
+    <!-- Service Area Map -->
+    <section class="service-area-section">
+        <div class="container">
+            <h2 class="section-title">Service Coverage Area</h2>
+            <div class="coverage-info">
+                <div class="coverage-item" data-animate>
+                    <h3>Pocatello Region</h3>
+                    <p>Complete coverage throughout Pocatello and surrounding areas including Chubbuck, Inkom, and McCammon</p>
+                </div>
+                <div class="coverage-item" data-animate>
+                    <h3>Idaho Falls Region</h3>
+                    <p>Full service coverage across Idaho Falls, Ammon, Iona, and neighboring communities</p>
+                </div>
+            </div>
+            <div class="map-placeholder" data-animate>
+                <p>Service Area: Pocatello & Idaho Falls, Idaho</p>
+                <p class="map-note">Covering a 50-mile radius from each location</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section with Live Status -->
     <section id="hours" class="hours-section">
         <div class="container">
             <h2 class="section-title">Business Hours</h2>
@@ -232,31 +342,63 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Form -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <h3>Pocatello Office</h3>
-                    <div class="location-details">
-                        <p class="address">2700 1/2 S 5th Ave<br>Pocatello, ID 83201</p>
-                        <a href="tel:+12082518971" class="phone-link">(208) 251-8971</a>
+            <div class="contact-wrapper">
+                <div class="locations-grid">
+                    <div class="location-card" data-animate>
+                        <h3>Pocatello Office</h3>
+                        <div class="location-details">
+                            <p class="address">2700 1/2 S 5th Ave<br>Pocatello, ID 83201</p>
+                            <a href="tel:+12082518971" class="phone-link">(208) 251-8971</a>
+                        </div>
+                    </div>
+                    <div class="location-card" data-animate>
+                        <h3>Idaho Falls Office</h3>
+                        <div class="location-details">
+                            <p class="address">2011 Heyrend Way<br>Idaho Falls, ID 83402</p>
+                            <a href="tel:+12088511007" class="phone-link">(208) 851-1007</a>
+                        </div>
                     </div>
                 </div>
-                <div class="location-card">
-                    <h3>Idaho Falls Office</h3>
-                    <div class="location-details">
-                        <p class="address">2011 Heyrend Way<br>Idaho Falls, ID 83402</p>
-                        <a href="tel:+12088511007" class="phone-link">(208) 851-1007</a>
-                    </div>
+
+                <!-- Quick Contact Form -->
+                <div class="contact-form-wrapper" data-animate>
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select Service Needed</option>
+                                <option value="towing">Towing Service</option>
+                                <option value="roadside">Roadside Assistance</option>
+                                <option value="recovery">Recovery Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" placeholder="Describe your situation..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <p class="form-note">For emergencies, please call us directly</p>
+                    </form>
                 </div>
-            </div>
-            <div class="cta-section">
-                <p class="cta-text">Need immediate assistance? Call us now!</p>
-                <div class="cta-buttons">
-                    <a href="tel:+12082518971" class="cta-btn">Call Pocatello: (208) 251-8971</a>
-                    <a href="tel:+12088511007" class="cta-btn">Call Idaho Falls: (208) 851-1007</a>
+
+                <div class="cta-section">
+                    <p class="cta-text">Need immediate assistance? Call us now!</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+12082518971" class="cta-btn">Call Pocatello: (208) 251-8971</a>
+                        <a href="tel:+12088511007" class="cta-btn">Call Idaho Falls: (208) 851-1007</a>
+                    </div>
                 </div>
             </div>
         </div>
